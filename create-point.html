@@ -8,10 +8,10 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&wght@700display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
 
   <link rel="stylesheet" href="/sytles/main.css">
   <link rel="stylesheet" href="/sytles/create-point.css">
@@ -39,19 +39,13 @@
 
                 <fieldset>
                     <legend>
-
-                        <h2>Dados da entidade</h2>
+                        <h2>Dados da identidade</h2>
                     </legend>
-
-
-
-
 
                     <div class="field">
 
                         <label for="">Nome da entidade</label>
                         <input type="text" name="name">
-
                     </div>
 
                     <div class="field-group">
@@ -71,9 +65,8 @@
                             <label for="state">Estado</label>
                             <select name="uf">
                                 <option value="">Selecione o estado</option>
-
                             </select>
-                            
+                            <input type="hidden" name="state">
                         </div> 
 
                         <div class="field">
@@ -88,14 +81,18 @@
   
                     </div>
 
-                    
-                       
+
+
                 </fieldset>
+                   
+
 
 
                 <button type="submit">Cadastrar ponto de coleta</button>
             </form>
     </div>
+
+    <script src="/scripts/create-point.js"></script>
 
 </body>
 
