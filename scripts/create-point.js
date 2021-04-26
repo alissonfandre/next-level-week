@@ -63,8 +63,42 @@ for(const item of itemsToCollect){
     item.addEventListener("click", handleSelectedItem)
 }
 
+
+const collectedItems = document.querySelector("input[name=items]")
+
+let SelectedItem = []
+
+
+
+
 function handleSelectedItem(event){
-    const itemId=event.target.dataset.id
-    console.log()
+
+    const itemli=event.target
+
+    itemli.classList.toggle("selected")
+
+    const itemId=itemli.dataset.id
+
+    const alreadySelected = SelectedItems.findIndex( item => {
+        const itemFound = item == itemId
+        return itemFound
+    })
+
+    if(alreadySelected >= 0){
+        const filteradItems = SelectedItems.filter(item =>{
+            const itemIsDifferent = item != itemId
+           return itemIsDifferent
+        })
+
+        SelectedItems = filteradItems 
+    } else{
+
+        SelectedItems.push(itemId)
+    }
+       
+
+    collectedItems.value = SelectedItems
+  
+   
 
 }
