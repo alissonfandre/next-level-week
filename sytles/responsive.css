@@ -17,6 +17,10 @@
         transform: translateX(-50%);
     } 
 
+    #page-search-results .cards{
+        grid-template-columns: 1fr;
+    }
+
     #page-home main {
         align-items: center;
     }
