@@ -43,10 +43,20 @@ db.serialize(()=> {
         "Santa Catarina",
         "Rio sul",
         "Resíduos Eletrônicos, lâmpadas"
-    ] 
-    db.run(query,values,function(){
+    ]  
 
-    })
+    function afterInsertData(err){
+        if(err) {
+            return console.log(err)
+        }
+
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+
+    }
+
+
+    db.run(query,values,afterInsertData)
 
 
     //3 consultar os dados da tabela 
