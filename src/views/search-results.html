@@ -20,24 +20,25 @@
 
         <div class="cards">
 
-            {% for place in places %}
+            {% for place in place %}
 
                 <div class="card">
-                <img src="{{ places.image }}" alt="{{ places.name }}">
-                <h1>{{ places.name }}</h1>
-                <h3>{{ places.items }}</h3>
+                <img src="{{ place.image }}" alt="{{ place.name }}">
+                <h1>{{ place.name }}</h1>
+                <h3>{{ place.items }}</h3>
                 <P>
-                     {{ places.city }}, {{ places.state }}
+                     {{ place.city }}, {{ place.state }}
                      <br/>
-                     {{ places.adress }}
+                     {{ place.adress }}
                      <br/>
-                      {{ places.adress2 }}
+                      {{ place.adress2 }}
                 </P>
-            </div>
+              </div>
 
 
             {% endfor %}
 
         </div>
+        
     </main>
 {% endblock content %}

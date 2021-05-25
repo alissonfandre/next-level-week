@@ -30,19 +30,22 @@ server.get("/create-point", (req, res) => {
 server.get("/search", (req, res) => {
 
 
-    db.all(`SELECT * FROM places`, function(err, rows){
-
+    db.all(`SELECT * FROM place`, function(err,rows){
         if(err) {
             return console.log(err)
         }
 
         console.log(rows)
 
+        const total = rows.length
 
 
-        return res.render("search-results.html", {places: rows})
+
+        return res.render("search-results.html", { place: rows})
          
     })  
 })
 
+
+//ligar o servidor 
 server.listen(3000)
