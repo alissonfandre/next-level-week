@@ -17,25 +17,27 @@
             <strong>2 Pontos</strong>
             encontrados
         </h4>
+
         <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
-                <h1>Colectoria</h1>
-                <h3>Resíduos Eletrônicos, lâmpadas</h3>
+
+            {% for place in places %}
+
+                <div class="card">
+                <img src="{{ places.image }}" alt="{{ places.name }}">
+                <h1>{{ places.name }}</h1>
+                <h3>{{ places.items }}</h3>
                 <P>
-                    Rio sul, Santa Catarina <br/> Guilherme Gnballa, Jardim América <br/> N 260
+                     {{ places.city }}, {{ places.state }}
+                     <br/>
+                     {{ places.adress }}
+                     <br/>
+                      {{ places.adress2 }}
                 </P>
             </div>
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=801&q=80"
-                    alt="Papersider">
-                <h1>Papersider</h1>
-                <h3>Papéis e Papelão</h3>
-                <P>
-                    Rio sul, Santa Catarina <br/> Guilherme Gnballa, Jardim América <br/> N 260
-                </P>
-            </div>
+
+
+            {% endfor %}
+
         </div>
     </main>
 {% endblock content %}
