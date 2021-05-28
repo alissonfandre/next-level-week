@@ -24,8 +24,20 @@ server.get("/", (req, res) => {
 })
 
 server.get("/create-point", (req, res) => {
+
+    //req.query string 
+    console.log(req.query)
+
+
+
     return res.render("create-point.html")
 })
+
+
+
+
+
+
 
 server.get("/search", (req, res) => {
 
@@ -41,7 +53,7 @@ server.get("/search", (req, res) => {
 
 
 
-        return res.render("search-results.html", { place: rows})
+        return res.render("search-results.html", { place: rows, total:total})
          
     })  
 })
