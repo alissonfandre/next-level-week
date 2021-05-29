@@ -8,11 +8,13 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/sytles/create-point.css">
+    <link rel="stylesheet" href="/sytles/modal.css">
 {% endblock styles %}
 
 {% block content %}
     {%include "partials/page-header.html"%}
-    <form action="">
+
+    <form action="/savepoint" method="POST">
         <h1>Cadastre um ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -70,27 +72,27 @@
                     <span>Selecione um ou mais itens abaixo</span>
             </legend>
             <div class="items-gride">
-                <li data-id="1">
+                <li data-id="Lâmpadas">
                     <img src="/icones/lampadas.svg" alt="Lâmpadas">
                     <span>Lâmpadas</span>
                 </li>
-                <li data-id="2">
+                <li data-id="Pilhas e baterias">
                     <img src="/icones/baterias.svg" alt="Pilhas e baterias">
                     <span>Pilhas e baterias</span>
                 </li>
-                <li data-id="3">
+                <li data-id="Papeis e papelão">
                     <img src="/icones/papeis-papelao.svg" alt="Papeis e papelão">
                     <span>Papeis e papelão</span>
                 </li>
-                <li data-id="4">
+                <li data-id="Resíduos Eletrônicos">
                     <img src="/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
                     <span>Resíduos Eletrônicos</span>
                 </li>
-                <li data-id="5">
+                <li data-id="Resíduos Orgânicos">
                     <img src="/icones/organicos.svg" alt="Resíduos Orgânicos">
                     <span>Resíduos Orgânicos</span>
                 </li>
-                <li data-id="6">
+                <li data-id="Óleo de Cozinha">
                     <img src="/icones/oleo.svg" alt="Óleo de Cozinha">
                     <span>Óleo de Cozinha</span>
                 </li>
@@ -99,6 +101,12 @@
         </fieldset>
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
+
+    {% if saved %}
+      {%include "partials/point-created.html"%}
+    {% endif %}
+
+
 {% endblock content%}
 
 {% block scripts %}
