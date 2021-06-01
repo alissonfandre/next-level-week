@@ -60,7 +60,7 @@ main .card img{
 }
 
 main .card h1{
-    margin: 32px;
+    margin: 32px 0;
     font-size: 36px;
     line-height: 41px;
 
@@ -70,7 +70,7 @@ main .card h1{
 main .card h3{
     margin: 24px 0;
 
-    font-family: Robot;
+    font-family: Roboto;
     font-weight: bold;
 
     font-size: 24px; 

@@ -16,6 +16,7 @@ align-items: center;
 color: var(--title-color--);
 font-weight: bold;
 
+font-family: Roboto;
 display: flex;
 align-items: center;
 }
@@ -75,7 +76,8 @@ form legend h2{
 
 form legend span{
     font-size: 14px;
-    color: var(--title-color) ;
+    color: var(--title-color--) ;
+    font-family: 'Roboto';
 }
 
 form .field{
@@ -115,6 +117,7 @@ form select{
 form label{
     font-size: 14px;
     margin-bottom: 8px;
+    font-family: 'Roboto';
 
 
 }
@@ -185,6 +188,7 @@ form button:hover{
     align-items: center;
 
     color: var(--title-color);
+    font-family: 'Roboto';
 }
 
 .items-gride li.selected{

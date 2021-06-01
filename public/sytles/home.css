@@ -32,6 +32,7 @@
    
        color: var(--title-color);
        font-weight: 700;
+       font-family: Roboto;
    }
    
    #page-home header a span{
@@ -65,12 +66,14 @@
        font-size: 24px;
        line-height: 38px;
        margin-top: 24px;
+       font-family: Roboto;
    }
    
    #page-home main a{
        width: 100%;
        max-width: 360px;
        height: 72px;
+       font-family: Roboto;
    
        
    
